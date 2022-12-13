@@ -16,11 +16,16 @@ import Auction from '../pages/Auction/Auction';
 import AuctionDetails from '../pages/Auction/AuctionDetails';
 import Drop from '../pages/Drop/Drop';
 
+import NavBar from '../components/header/header'
+import Footer from '../components/footer/footer'
+
 
 
 
 const Navigator = () => {
     return (
+        <>
+        <NavBar />
         <Routes>
         <Route path={HOME} element={<Home />} />
         <Route path={PRODUCT} element={<Product />} />
@@ -30,6 +35,9 @@ const Navigator = () => {
         <Route path={DROP} element={<Drop />} />
         <Route path={ANY_ROUTE} element={<div>NOT FOUND PAGE</div>} />
         </Routes>
+        <Footer />
+        </>
+        
     );
 };
 
